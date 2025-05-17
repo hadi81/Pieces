@@ -1,14 +1,14 @@
 {
     "firmware": {
-			"bc" : "/home/arslan/projects/SecRTOS/workdir/FreeRTOS/FreeRTOS/Demo/CORTEX_MPU_M3_MPS2_QEMU_CLANG/build/RTOSDemo.axf.bc",
-			"symex_bc": "/home/arslan/projects/SecRTOS/workdir/FreeRTOS/FreeRTOS/Demo/CORTEX_MPU_M3_MPS2_QEMU_CLANG/build/RTOSDemo.axf.bc",
+			"bc" : "/home/hadi/tools/mbed/test/nano33_hello/final_output.bc",
+			"symex_bc": "/home/hadi/tools/mbed/test/nano33_hello/final_output.bc",
 			"background_policy" : "freertos_mpu",
 			"os": "freertos",
 			"platform": "ARM",
-			"svd": "MPS2.svd",
+			"svd": "nrf52840.svd",
 			"relaxed_pins": "True",
 			"frontend_flags": "-c",
-			"project_root": "/home/arslan/projects/SecRTOS/workdir/FreeRTOS/",
+			"project_root": "/home/hadi/tools/mbed/test/nano33_hello",
 			"cliques": {
 			}
 	}

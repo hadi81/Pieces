@@ -1,0 +1,15 @@
+{
+    "firmware": {
+			"bc" : "/home/hadi/tools/mbed/test/mbedos-clang-port/final_output.bc" ,
+			"symex_bc": "/home/hadi/tools/mbed/test/mbedos-clang-port/final_output.bc",
+			"background_policy" : "freertos_mpu",
+			"os": "cmsis-rtx",
+			"platform": "ARM",
+			"svd": "nrf52840.svd",
+			"relaxed_pins": "True",
+			"frontend_flags": "-c",
+			"project_root": "/home/hadi/tools/mbed/test/mbedos-clang-port/final_output.bc",
+			"cliques": {
+			}
+	}
+}
