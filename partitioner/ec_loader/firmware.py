@@ -7,6 +7,8 @@ class Firmware:
 	printDevUsage = False
 
 	def __init__(self, config, llvm_data_dir=None):
+		self.priv_comp = self.create_compartment()
+		# from IPython import embed; embed();
 		if llvm_data_dir is None:
 			llvm_data_dir = os.environ["P_OUT_DIR"]
 		self.config = config
@@ -133,6 +135,8 @@ class Firmware:
 				for fun in self.svdfmap[(dev,base,size)]:
 					debug(" " + str(fun))
 			debug(str(len(self.svdfmap)) + " devices found")
+		
+		# from IPython import embed; embed();
 
 
 	def ignore_funcs(self, llvm_data_dir):
@@ -282,6 +286,8 @@ class Firmware:
 		for policy in policies:
 			obj = policy()
 			obj.finalizer(self)
+	
+		# from IPython import embed; embed();
 
 	def dump(self):
 		debug("Number of compartments: "+ str(len(self.compartments)))
@@ -310,9 +316,17 @@ class Firmware:
 					if ogFunc is None:
 						#Make this the big compartment, everything will be merged into it.
 						ogFunc = func
+					if not func in self.compartmentMap.keys():
+						warn(str(func) + "was dropped, var:" +var)
+						return
+					if not ogFunc in self.compartmentMap.keys():
+						warn(str(ogFunc) + "was dropped, var:" + var)
+						return
 					if self.compartmentMap[ogFunc] != self.compartmentMap[func]:
 						if self.clique_consistent(func, ogFunc):
 							warn("Merging for shared data:" + var)
+							warn(ogFunc + " and " + func + " have " + var + " in common") 
+							# from IPython import embed; embed();
 							self.compartmentMap[ogFunc].mergeCompartments(self.compartmentMap[func])
 						else:
 							error("Invalid Clique Configuration for variable:" + var)
@@ -324,7 +338,7 @@ class Firmware:
 						warn("	" +ogFunc)
 						if Error:
 							sys.exit(1)
-						Merge = True
+						# Merge = True
 	
 	def sanitize(self):
 		for var in self.pddg:
@@ -332,6 +346,12 @@ class Firmware:
 			for func in self.pddg[var]:
 				if ogFunc is None:
 					ogFunc = func
+				if not func in self.compartmentMap.keys():
+					warn(str(func) + "was dropped, var:" +var)
+					return
+				if not ogFunc in self.compartmentMap.keys():
+					warn(str(ogFunc) + "was dropped, var:" + var)
+					return
 				if self.compartmentMap[ogFunc] != self.compartmentMap[func]:
 					error("Resource sharing between compartments")
 					error("For data:" + var)

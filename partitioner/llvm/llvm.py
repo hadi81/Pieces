@@ -7,11 +7,12 @@ class Compiler:
 	def analyze(self, input):
 		if (os.environ["NO_RUN"] == "0"):
 			debug("Analyzing firmware.")
-			run_cmd([os.environ["SVF"], input["bc"], "./kern_funcs2", "./user_funcs2", "./safe_funcs2", "./create_funcs", "./dev.map", "-op", input["os"]])
+			# from IPython import embed; embed();
+			run_cmd([os.environ["SVF"], input["bc"], "./kern_funcs_mbed", "./user_funcs_mbed", "./safe_funcs_mbed", "./create_funcs_mbed", "./dev.map", "-op", input["os"]])
 
 	def instrument(self, input):
 		debug("Instrumenting firmware.")
-		run_cmd([os.environ["SVF"], input["bc"], "./kern_funcs2", "./user_funcs2", "./safe_funcs2", "./create_funcs", "./dev.map", "-p", "./.policy", "-op", input["os"]])
+		run_cmd([os.environ["SVF"], input["bc"], "./kern_funcs_mbed", "./user_funcs_mbed", "./safe_funcs_mbed", "./create_funcs_mbed", "./dev.map", "-p", "./.policy", "-op", input["os"]])
 		return os.environ["P_OUT_DIR"] + "temp.bc"
 
 	def disassemble(self, input):

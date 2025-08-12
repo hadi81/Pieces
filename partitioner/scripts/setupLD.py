@@ -2,6 +2,10 @@
 
 import sys, getopt
 
+def writeRtmkCodeSecton(cpatch, num):
+	print("Number of compartments:" +str(num))
+	#Write prefix
+
 def writeCodeSections(cpatch, num):
 	print("Number of compartments:" +str(num))
 	#Write prefix

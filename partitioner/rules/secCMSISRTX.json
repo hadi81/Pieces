@@ -10,6 +10,33 @@
 			"frontend_flags": "-c",
 			"project_root": "/home/hadi/tools/mbed/test/mbedos-clang-port/final_output.bc",
 			"cliques": {
+					"LwIP" :{
+					  "name": "Mbed Misc",
+                      "policy": "priv",
+                      "dir": "mbed-os/",
+					  "isolation": "monitor",
+					  "pins" : {
+
+					  }
+                    },
+					"Libc" :{
+					  "name": "Mbed Misc",
+                      "policy": "priv",
+                      "dir": "gcc-arm-none-eabi-10.3-2021.10/",
+					  "isolation": "monitor",
+					  "pins" : {
+
+					  }
+                    },
+					"Tflite" :{
+					  "name": "Mbed Misc",
+                      "policy": "priv",
+                      "dir": "external/",
+					  "isolation": "monitor",
+					  "pins" : {
+
+					  }
+                    }
 			}
 	}
 }
