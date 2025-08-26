@@ -1,0 +1,42 @@
+{
+    "firmware": {
+			"bc" : "/home/hadi/test/stm32tflm/nonlib/Prj3/Clang/build/stm32AiApp.elf.bc" ,
+			"symex_bc": "/home/hadi/test/stm32tflm/nonlib/Prj3/Clang/build/stm32AiApp.elf.bc",
+			"background_policy" : "freertos_mpu",
+			"os": "cmsis-rtx",
+			"platform": "ARM",
+			"svd": "nrf52840.svd",
+			"relaxed_pins": "True",
+			"frontend_flags": "-c",
+			"project_root": "/home/hadi/test/stm32tflm/nonlib/Prj3/Clang/build/stm32AiApp.elf.bc",
+			"cliques": {
+					"LwIP" :{
+					  "name": "tflm Misc",
+                      "policy": "priv",
+                      "dir": "tflm/",
+					  "isolation": "monitor",
+					  "pins" : {
+
+					  }
+                    },
+					"Libc" :{
+					  "name": "tflm Misc",
+                      "policy": "priv",
+                      "dir": "gcc-arm-none-eabi-10.3-2021.10/",
+					  "isolation": "monitor",
+					  "pins" : {
+
+					  }
+                    },
+					"Drivers" :{
+					  "name": "tflm Misc",
+                      "policy": "priv",
+                      "dir": "Drivers/",
+					  "isolation": "monitor",
+					  "pins" : {
+
+					  }
+                    }
+			}
+	}
+}
