@@ -1,0 +1,86 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%environment
+    export DEBIAN_FRONTEND=noninteractive
+    export llvm_version=16
+    export HOME=/home/SVF-tools
+    export SVF_DIR=/home/SVF-tools/SVF
+    export LLVM_DIR=/usr/lib/llvm-16
+    export PATH=/home/SVF-tools/SVF/Debug-build/bin:/usr/lib/llvm-16/bin:/pieces/partitioner/scripts:$PATH
+    export Z3_DIR=/home/SVF-tools/SVF/z3.obj
+
+%post
+    set -e
+    export DEBIAN_FRONTEND=noninteractive
+    export llvm_version=16
+    export HOME=/home/SVF-tools
+
+    lib_deps="cmake g++ gcc git zlib1g-dev libncurses5-dev libtinfo6 build-essential libssl-dev libpcre2-dev zip libzstd-dev"
+    build_deps="wget xz-utils git tcl software-properties-common"
+
+    apt-get update --fix-missing
+    apt-get install -y $build_deps $lib_deps
+
+    apt-get install -y \
+        clang-${llvm_version} \
+        libclang-${llvm_version}-dev \
+        llvm-${llvm_version} \
+        llvm-${llvm_version}-dev \
+        llvm-${llvm_version}-tools
+
+    add-apt-repository ppa:deadsnakes/ppa
+    apt-get update
+    apt-get install -y python3.10-dev python3-pip
+    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+
+    apt-get install -y python3-clang-16
+
+    pip3 install --no-cache-dir \
+        ropgadget \
+        pyelftools \
+        networkx \
+        pydot
+
+    rm -rf /var/lib/apt/lists/*
+
+    rm -rf /home/SVF-tools
+    mkdir -p ${HOME}
+    cd ${HOME}
+
+    # git clone https://github.com/SVF-tools/SVF.git
+    # cd SVF
+    # git fetch --all --tags
+    # git checkout tags/SVF-3.1
+
+    # echo "Doing ls before"
+    # echo "$(ls svf-llvm/tools/svf-pieces)"
+    # mkdir -p svf-llvm/tools/svf-pieces
+    # echo "Doing ls after"
+    # echo "$(ls svf-llvm/tools/svf-pieces)"
+
+# %files
+    # /home/hzm5471/repos/new_pieces/Pieces/SVF/* /home/SVF-tools/SVF/svf-llvm/tools/svf-pieces/
+
+# %post
+    # cd /home/SVF-tools/SVF
+    # echo "Doing ls"
+    # ls /home/SVF-tools/SVF/
+    # echo "$(ls /home/SVF-tools/SVF/svf-llvm/tools/svf-pieces)"
+    # echo "$(pwd)"
+
+    # sed -i '1i add_subdirectory(svf-pieces)' svf-llvm/tools/CMakeLists.txt
+
+    # printf '/set(ALL_TOOLS/,/)/ {\n/)/a\\\nlist(APPEND ALL_TOOLS svf-pieces)\n}\n' > script.sed
+    # sed -i -f script.sed svf-llvm/tools/CMakeLists.txt
+    # rm script.sed
+
+    # echo "Building SVF..."
+    # bash ./build.sh
+
+    # ln -s /home/SVF-tools/SVF/z3.obj/bin/libz3.so \
+    #       /home/SVF-tools/SVF/z3.obj/bin/libz3.so.4 || true
+
+%runscript
+    exec "$@"
+

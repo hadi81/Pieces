@@ -1,0 +1,77 @@
+== Neural Network Traversal ==
+Network global: @global_network
+  Layer[1]: @gemm_0_layer
+    Kind: dense/base
+    forward: forward_dense
+  Layer[2]: @nl_0_nl_layer
+    Kind: nl
+    forward: forward_relu
+  Layer[3]: @gemm_1_layer
+    Kind: dense/base
+    forward: forward_dense
+  Layer[4]: @nl_1_nl_layer
+    Kind: nl
+    forward: forward_relu
+  Layer[5]: @gemm_2_layer
+    Kind: dense/base
+    forward: forward_dense
+
+Network global: @g_network_imgclf
+  Layer[1]: @conv2d_0_layer
+    Kind: unknown(16 fields)
+    forward: forward_conv2d_if32of32wf32
+  Layer[2]: @nl_0_nl_layer.95
+    Kind: nl
+    forward: forward_relu
+  Layer[3]: @conv2d_1_layer
+    Kind: unknown(16 fields)
+    forward: forward_dw_if32of32wf32
+  Layer[4]: @nl_2_layer
+    Kind: nl
+    forward: forward_relu
+  Layer[5]: @pool_4_layer
+    Kind: unknown(12 fields)
+    forward: forward_mp
+  Layer[6]: @pool_3_layer
+    Kind: unknown(12 fields)
+    forward: forward_ap
+  Layer[7]: @eltwise_5_layer
+    Kind: unknown(10 fields)
+    forward: forward_eltwise
+  Layer[8]: @eltwise_6_layer
+    Kind: unknown(10 fields)
+    forward: forward_eltwise
+  Layer[9]: @gemm_8_layer
+    Kind: dense/base
+    forward: forward_dense
+  Layer[10]: @nl_9_layer
+    Kind: nl
+    forward: forward_tanh
+  Layer[11]: @gemm_10_layer
+    Kind: dense/base
+    forward: forward_dense
+  Layer[12]: @nl_11_layer
+    Kind: nl
+    forward: forward_sigmoid
+  Layer[13]: @eltwise_12_layer
+    Kind: dense/base
+    forward: forward_bn
+  Layer[14]: @nl_13_layer
+    Kind: nl
+    forward: forward_abs
+  Layer[15]: @eltwise_14_layer
+    Kind: unknown(10 fields)
+    forward: forward_eltwise
+  Layer[16]: @eltwise_15_layer
+    Kind: unknown(10 fields)
+    forward: forward_eltwise
+  Layer[17]: @nl_16_layer
+    Kind: nl
+    forward: forward_sqrt
+  Layer[18]: @gemm_17_layer
+    Kind: dense/base
+    forward: forward_dense
+  Layer[19]: @nl_18_layer
+    Kind: unknown(10 fields)
+    forward: forward_sm
+

@@ -3,3 +3,27 @@
 partitioner/monitor/build/*
 build_ctxt/
 temp/
+out/
+
+
+# Python
+*.pyc
+__pycache__/
+
+# Build / output dirs
+out/
+partitioner/out/
+partitioner/old_out/
+build_ctxt/
+temp/
+
+# Virtual env
+venv/
+
+# dot files
+*.dot
+
+# Intermediate analysis artifacts
+temp.bc
+temp.ll
+compartmentMap

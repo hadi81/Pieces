@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"monitor.h": "c",
+			"inttypes.h": "c",
+			"model_struct.h": "c",
+			"schema_generated.h": "c",
+			"*.bak": "cpp",
+			"cstdint": "cpp"
+		}
+	}
+}

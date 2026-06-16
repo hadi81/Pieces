@@ -1,0 +1,1575 @@
+
+*********General Stats***************
+################ (program : stm32AiApp.elf.bc)###############
+AddrsNum            21688
+BBWith2Succ         6228
+BBWith3Succ         33
+CallsNum            4184
+ConstArrayObj       5
+ConstStructObj      46
+ConstantObj         0
+CopysNum            6252
+FIObjNum            1301
+FSObjNum            19402
+FunctionObjs        1290
+GepsNum             10136
+GlobalObjs          116
+HeapObjs            1
+IndCallSites        2142
+LoadsNum            47921
+MaxStructSize       55
+NonPtrObj           16678
+ReturnsNum          1643
+StackObjs           19296
+StoresNum           29990
+TotalCallSite       5599
+TotalFieldObjects   1339
+TotalObjects        22043
+TotalPTASVFStmts    56261
+TotalPointers       203542
+TotalSVFStmts       155995
+VarArrayObj         22
+VarStructObj        310
+----------------Time and memory stats--------------------
+LLVMIRTime          0.434
+SVFIRTime           3.974
+SymbolTableTime     0.649
+#######################################################
+
+*********PTACallGraph Stats (Andersen analysis)***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Numbers stats----------------------------
+CalRetPairInCycle   4
+MaxNodeInCycle      2
+NodeInCycle         3
+TotalCycle          2
+TotalEdge           3511
+TotalNode           1290
+#######################################################
+
+*********Andersen Pointer Analysis Stats***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AvgIn/OutAddrEdge   0.309298
+AvgIn/OutCopyEdge   0.434545
+AvgIn/OutEdge       0.999166
+AvgIn/OutLoadEdge   0.167645
+AvgIn/OutStoreEdge  0.0876787
+AvgPtsSetSize       0.148786
+AvgTopLvlPtsSize    0.662925
+CollapseTime        0
+CopyGepTime         0
+LoadStoreTime       0
+MemoryUsageVmrss    221420
+MemoryUsageVmsize   220480
+SCCDetectTime       0
+SCCMergeTime        0
+TotalTime           2.223
+UpdateCGTime        0
+----------------Numbers stats----------------------------
+AddrProcessed       21190
+CopyProcessed       7430
+DummyFieldPtrs      601
+FieldObjs           1339
+GepProcessed        3053
+IndCallSites        2142
+IndEdgeSolved       42
+LoadProcessed       10475
+LocalVarInRecur     48
+MaxInAddrEdge       1
+MaxInCopyEdge       211
+MaxInLoadEdge       21
+MaxInStoreEdge      21
+MaxNodesInSCC       65
+MaxOutAddrEdge      488
+MaxOutCopyEdge      299
+MaxOutLoadEdge      94
+MaxOutStoreEdge     167
+MaxPtsSetSize       16
+MemObjects          22043
+NodesInCycles       2819
+NullPointer         3581
+NumOfAddrs          21134
+NumOfCGEdge         47138
+NumOfCGNode         70893
+NumOfCopys          20680
+NumOfFieldExpand    0
+NumOfGeps           9012
+NumOfLoads          11455
+NumOfSCCDetect      5
+NumOfSFRs           0
+NumOfStores         5991
+NumOfValidNode      68329
+NumOfValidObjNode   21423
+Pointers            203542
+PointsToBlkPtr      0
+PointsToConstPtr    35
+SolveIterations     5
+StoreProcessed      6334
+TotalCycleNum       391
+TotalObjects        22043
+TotalPWCCycleNum    159
+TotalPointers       203542
+#######################################################
+
+****Persistent Points-To Cache Statistics: Andersen's analysis bitvector****
+################ (program : stm32AiApp.elf.bc)###############
+UniquePointsToSets       22337
+TotalUnions              34993
+PropertyUnions           34441
+UniqueUnions             153
+LookupUnions             97
+PreemptiveUnions         302
+TotalComplements         356404
+PropertyComplements      355796
+UniqueComplements        230
+LookupComplements        148
+PreemptiveComplements    230
+TotalIntersections       20024
+PropertyIntersections    19564
+UniqueIntersections      0
+LookupIntersections      0
+PreemptiveIntersections  460
+#######################################################
+
+*********Memory SSA Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AverageRegSize      1.09709
+GenMUCHITime        0.122
+GenRegionTime       0.487
+InsertPHITime       0.024
+SSARenameTime       0.104
+TotalMSSATime       0.74
+----------------Numbers stats----------------------------
+BBHasMSSAPhi        773
+CSChiNode           212
+CSHasChi            143
+CSHasMu             373
+CSMuNode            599
+FunEntryChi         5135
+FunHasEntryChi      1043
+FunHasRetMu         1214
+FunRetMu            5077
+LoadHasMu           11997
+LoadMuNode          10352
+MSSAPhi             6439
+MaxRegSize          80
+MemRegions          4748
+StoreChiNode        5959
+StoreHasChi         6256
+#######################################################
+
+*********SVFG Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+ATNodeTime          0.048
+AvgWeight           1.10517
+ConnDirEdgeTime     0
+ConnIndEdgeTime     0.079
+OptTime             0
+TLNodeTime          0
+TotalTime           0.128
+----------------Numbers stats----------------------------
+ActualIn            599
+ActualOut           212
+ActualParam         4651
+ActualRet           869
+Addr                21190
+AvgInDegree         1
+AvgIndInDeg         1
+AvgIndOutDeg        1
+AvgOutDegree        1
+Copy                2465
+DirectCallEdge      2870
+DirectEdge          46715
+DirectRetEdge       785
+FormalIn            5135
+FormalOut           5077
+FormalParam         2249
+FormalRet           368
+Gep                 10136
+IndCallEdge         856
+IndRetEdge          357
+IndirectEdge        36417
+IndirectEdgeLabels  40247
+Load                11997
+MSSAPhi             6439
+MaxInDegree         211
+MaxIndInDeg         211
+MaxIndOutDeg        95
+MaxOutDegree        299
+PHI                 395
+Store               6537
+TotalEdge           83132
+TotalNode           78320
+#######################################################
+
+*********PTACallGraph Stats (Flow-sensitive analysis)***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Numbers stats----------------------------
+CalRetPairInCycle   4
+FIObjNum            1302
+FSObjNum            19402
+MaxNodeInCycle      2
+NodeInCycle         3
+TotalCycle          2
+TotalEdge           3511
+TotalNode           1290
+#######################################################
+
+*********Flow-Sensitive Pointer Analysis Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AddrTime            0
+AverageSCCSize      5.50201
+AvgAddrTakenVarPts  0.316719
+AvgINPtsSize        0
+AvgOUTPtsSize       0
+AvgPtsSize          0.659107
+AvgTopLvlPtsSize    0.659107
+CopyTime            0
+DirectPropaTime     0
+GepTime             0
+IndirectPropaTime   0
+LoadTime            0
+MemoryUsageVmrss    312956
+MemoryUsageVmsize   311428
+PhiTime             0
+ProcessTime         0
+PropagationTime     0
+SCCTime             0
+SolveTime           0.842
+StoreTime           0
+Strong/WeakUpdTime  0
+TotalTime           5.066
+UpdateCGTime        0
+----------------Numbers stats----------------------------
+AI_SNodesHaveIN     0
+AI_SNodesHaveOUT    0
+AO_SNodesHaveIN     0
+AO_SNodesHaveOUT    0
+CopysNum            2465
+DummyFieldPtrs      601
+FI_SNodesHaveIN     0
+FI_SNodesHaveOUT    0
+FO_SNodesHaveIN     0
+FO_SNodesHaveOUT    0
+FieldObjs           1341
+IndEdgeSolved       42
+LD_SNodesHaveIN     0
+LD_SNodesHaveOUT    0
+LocalVarInRecur     48
+MaxAddrTakenVarPts  16
+MaxINPtsSize        0
+MaxOUTPtsSize       0
+MaxPtsSize          16
+MaxSCCSize          191
+MaxTopLvlPtsSize    16
+MemObjects          22043
+NullPointer         3591
+NumOfAddrTakenVar   6340
+NumOfNodesInSCC     10971
+NumOfSCC            1994
+PHI_SNodesHaveIN    0
+PHI_SNodesHaveOUT   0
+Pointers            203542
+PointsToBlkPtr      33
+PointsToConstPtr    0
+PotentialVarHaveIN  0
+PotentialVarHaveOUT 0
+ProcessedAParam     0
+ProcessedAddr       42380
+ProcessedCopy       6861
+ProcessedFRet       0
+ProcessedGep        23400
+ProcessedLoad       36490
+ProcessedMSSANode   38505
+ProcessedPhi        1285
+ProcessedStore      23739
+SNodesHaveIN        0
+SNodesHaveOUT       0
+ST_SNodesHaveIN     0
+ST_SNodesHaveOUT    0
+SolveIterations     2
+StoresNum           6537
+StrongUpdates       5918
+TotalObjects        22043
+TotalPointers       203542
+VarHaveEmptyIN      0
+VarHaveEmptyOUT     0
+VarHaveIN           0
+VarHaveIN_AI        0
+VarHaveIN_AO        0
+VarHaveIN_FI        0
+VarHaveIN_FO        0
+VarHaveIN_LD        0
+VarHaveIN_PHI       0
+VarHaveIN_ST        0
+VarHaveOUT          0
+VarHaveOUT_AI       0
+VarHaveOUT_AO       0
+VarHaveOUT_FI       0
+VarHaveOUT_FO       0
+VarHaveOUT_LD       0
+VarHaveOUT_PHI      0
+VarHaveOUT_ST       0
+#######################################################
+
+****Persistent Points-To Cache Statistics: flow-sensitive analysis bitvector****
+################ (program : stm32AiApp.elf.bc)###############
+UniquePointsToSets       22113
+TotalUnions              104838
+PropertyUnions           103241
+UniqueUnions             276
+LookupUnions             899
+PreemptiveUnions         422
+TotalComplements         0
+PropertyComplements      0
+UniqueComplements        0
+LookupComplements        0
+PreemptiveComplements    0
+TotalIntersections       0
+PropertyIntersections    0
+UniqueIntersections      0
+LookupIntersections      0
+PreemptiveIntersections  0
+#######################################################
+_estack
+0
+_Min_Stack_Size
+0
+__sbrk_heap_end
+1
+_end
+0
+AHBPrescTable
+1
+APBPrescTable
+1
+uwTickPrio
+1
+uwTickFreq
+1
+uwTick
+1
+SystemCoreClock
+1
+DMA_CalcBaseAndBitshift.flagBitshiftOffset
+1
+_lrtmkdata
+0
+_srtmkdata2
+0
+_ertmkdata
+0
+ucHeap
+1
+heapSize
+1
+ucHeapInitFlag
+1
+xNextFreeByte
+1
+_scsection0
+0
+_szcsection0
+0
+_sosection0data
+0
+_szosection0
+0
+_scsection1
+0
+_szcsection1
+0
+_sosection1data
+0
+_szosection1
+0
+_sosection0datal
+0
+_sosection1datal
+0
+section_loads
+1
+_eosection0data
+0
+_eosection1data
+0
+end_loads
+1
+code_base
+1
+code_size
+1
+data_base
+1
+data_size
+1
+llvm.global_ctors
+0
+temp_val_array
+1
+sin_val_array
+1
+labels
+1
+micro_error_reporter
+1
+__dso_handle
+0
+error_reporter
+1
+resolver
+1
+model_temp
+1
+model_sinw
+1
+tensor_arena_temp_model
+1
+interpreter_temp_model
+1
+tensor_arena_sin_model
+1
+interpreter_sinw_model
+1
+husart1
+1
+husart2
+1
+glob_tensor_arena_ptr
+1
+.str
+1
+.str.5
+1
+.str.6
+1
+.str.7
+1
+.str.8
+1
+.str.9
+1
+.str.10
+1
+.str.11
+1
+__PRETTY_FUNCTION__._ZN11flatbuffers11EndianCheckEv
+1
+.str.12
+1
+_ZTVN6tflite22MicroMutableOpResolverILj110EEE
+0
+_ZTSN6tflite22MicroMutableOpResolverILj110EEE
+0
+_ZTSN6tflite15MicroOpResolverE
+0
+_ZTIN6tflite15MicroOpResolverE
+0
+_ZTIN6tflite22MicroMutableOpResolverILj110EEE
+0
+_ZTVN6tflite15MicroOpResolverE
+0
+.str.13
+1
+.str.14
+1
+.str.15
+1
+.str.16
+1
+.str.17
+1
+.str.18
+1
+psp_stack
+comp_info
+1
+_srtmkcode
+0
+selectedFunction
+arg
+sret
+shadow_stack
+sp
+bridge_time
+goff
+_shared_region
+total_secs
+1
+stmpF
+i
+.str.45
+1
+.str.1
+1
+.str.2
+1
+.str.3
+1
+.str.4
+1
+.str.5.46
+1
+.str.6.43
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorIijE3GetEj
+1
+.str.7.44
+1
+.str.49
+1
+.str.1.50
+1
+_ZN6tflite12_GLOBAL__N_124kOfflineMemAllocMetadataE
+1
+.str.2.51
+1
+.str.3.47
+1
+.str.4.48
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorINS_6OffsetIN6tflite6TensorEEEjE3GetEj
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorINS_6OffsetIN6tflite8OperatorEEEjE3GetEj
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorINS_6OffsetIN6tflite12OperatorCodeEEEjE3GetEj
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorINS_6OffsetIN6tflite8SubGraphEEEjE3GetEj
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorINS_6OffsetIN6tflite8MetadataEEEjE3GetEj
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorINS_6OffsetIN6tflite6BufferEEEjE3GetEj
+1
+.str.52
+1
+.str.1.53
+1
+.str.2.54
+1
+.str.3.55
+1
+.str.4.56
+1
+.str.5.67
+1
+.str.6.68
+1
+.str.7.69
+1
+.str.8.70
+1
+.str.9.71
+1
+.str.10.74
+1
+.str.11.77
+1
+.str.12.80
+1
+.str.13.81
+1
+.str.14.57
+1
+.str.15.58
+1
+.str.16.59
+1
+.str.17.60
+1
+.str.18.61
+1
+.str.19
+1
+.str.20
+1
+.str.21
+1
+.str.22
+1
+.str.23
+1
+.str.24
+1
+.str.25
+1
+.str.26
+1
+.str.27
+1
+.str.28
+1
+.str.29
+1
+.str.30
+1
+.str.31
+1
+.str.32
+1
+.str.33
+1
+.str.34
+1
+.str.35
+1
+.str.36
+1
+.str.37
+1
+.str.38
+1
+.str.39
+1
+.str.40
+1
+.str.41
+1
+.str.42
+1
+.str.43
+1
+.str.44
+1
+.str.45.62
+1
+.str.46
+1
+.str.47
+1
+.str.48
+1
+.str.49.63
+1
+.str.50
+1
+.str.51
+1
+.str.52.64
+1
+.str.53
+1
+.str.54
+1
+.str.55
+1
+.str.56
+1
+.str.57
+1
+.str.58
+1
+.str.59
+1
+.str.60
+1
+.str.61
+1
+.str.62
+1
+.str.63
+1
+.str.64
+1
+.str.65
+1
+.str.66
+1
+.str.67
+1
+.str.68
+1
+.str.69
+1
+.str.70
+1
+.str.71
+1
+.str.72
+1
+.str.73
+1
+.str.74
+1
+.str.75
+1
+.str.76
+1
+.str.77
+1
+.str.78
+1
+.str.79
+1
+.str.80
+1
+.str.81
+1
+.str.82
+1
+.str.83
+1
+.str.84
+1
+.str.85
+1
+.str.86
+1
+.str.87
+1
+.str.88
+1
+.str.89
+1
+.str.90
+1
+.str.91
+1
+.str.92
+1
+.str.93
+1
+.str.94
+1
+.str.95
+1
+.str.96
+1
+.str.97
+1
+.str.98
+1
+.str.99
+1
+.str.100
+1
+.str.101
+1
+.str.102
+1
+.str.103
+1
+.str.104
+1
+.str.105
+1
+.str.106
+1
+.str.107
+1
+.str.108
+1
+.str.109
+1
+.str.110
+1
+.str.111
+1
+.str.112
+1
+.str.113
+1
+.str.114
+1
+.str.115
+1
+.str.116
+1
+.str.117
+1
+.str.118
+1
+.str.119
+1
+.str.120
+1
+.str.121
+1
+.str.122
+1
+.str.123
+1
+.str.124
+1
+.str.125
+1
+.str.126
+1
+.str.127
+1
+.str.128
+1
+.str.129
+1
+.str.130
+1
+.str.131
+1
+.str.132
+1
+.str.133
+1
+.str.134
+1
+.str.135
+1
+.str.136
+1
+.str.137
+1
+.str.138
+1
+.str.139
+1
+.str.140
+1
+.str.141
+1
+.str.142
+1
+.str.143
+1
+.str.144
+1
+.str.145
+1
+.str.146
+1
+.str.147
+1
+.str.148
+1
+.str.149
+1
+.str.150
+1
+.str.151
+1
+.str.152
+1
+.str.153
+1
+.str.154
+1
+.str.155
+1
+.str.156
+1
+.str.157
+1
+.str.158
+1
+.str.159
+1
+.str.160
+1
+.str.161
+1
+.str.162
+1
+.str.163
+1
+.str.164
+1
+.str.165
+1
+.str.166
+1
+.str.167
+1
+.str.168
+1
+.str.169
+1
+.str.170
+1
+.str.171
+1
+.str.172
+1
+.str.173
+1
+.str.174
+1
+.str.175
+1
+.str.176
+1
+.str.177
+1
+.str.178
+1
+.str.179
+1
+.str.180
+1
+.str.181
+1
+.str.182
+1
+.str.183
+1
+.str.184
+1
+.str.185
+1
+.str.186
+1
+.str.187
+1
+.str.188
+1
+.str.189
+1
+.str.190
+1
+.str.191
+1
+.str.192
+1
+.str.193
+1
+.str.194
+1
+.str.195
+1
+.str.196
+1
+.str.197
+1
+.str.198
+1
+.str.199
+1
+.str.200
+1
+.str.201
+1
+.str.202
+1
+.str.203
+1
+.str.204
+1
+.str.205
+1
+.str.206
+1
+.str.207
+1
+.str.208
+1
+.str.209
+1
+.str.210
+1
+.str.211
+1
+.str.212
+1
+.str.213
+1
+.str.214
+1
+.str.215
+1
+.str.216
+1
+.str.217
+1
+.str.218
+1
+.str.219
+1
+.str.220
+1
+.str.221
+1
+.str.222
+1
+.str.223
+1
+.str.224
+1
+_ZZN11flexbuffers6Vector11EmptyVectorEvE12empty_vector
+1
+.str.225
+1
+.str.1.226
+1
+.str.2.227
+1
+.str.3.228
+1
+.str.4.229
+1
+.str.5.230
+1
+.str.6.231
+1
+_ZTVN6tflite13MicroProfilerE
+0
+_ZTSN6tflite13MicroProfilerE
+0
+_ZTSN6tflite22MicroProfilerInterfaceE
+0
+_ZTIN6tflite22MicroProfilerInterfaceE
+0
+_ZTIN6tflite13MicroProfilerE
+0
+.str.234
+1
+.str.237
+1
+.str.1.238
+1
+.str.2.239
+1
+.str.240
+1
+.str.1.241
+1
+.str.2.242
+1
+.str.3.243
+1
+_ZTVN6tflite23MicroInterpreterContextE
+0
+.str.250
+1
+_ZTSN6tflite23MicroInterpreterContextE
+0
+_ZTSN6tflite12MicroContextE
+0
+_ZTIN6tflite12MicroContextE
+0
+_ZTIN6tflite23MicroInterpreterContextE
+0
+_ZTVN6tflite12MicroContextE
+0
+_ZN12_GLOBAL__N_115error_reporter_E
+1
+_ZN12_GLOBAL__N_127micro_error_reporter_bufferE
+1
+_ZTVN6tflite18MicroErrorReporterE
+0
+_ZTSN6tflite18MicroErrorReporterE
+0
+_ZTSN6tflite13ErrorReporterE
+0
+_ZTIN6tflite13ErrorReporterE
+0
+_ZTIN6tflite18MicroErrorReporterE
+0
+_ZTVN6tflite13ErrorReporterE
+0
+_ZN6tflite12_GLOBAL__N_119kZeroLengthIntArrayE
+1
+.str.263
+1
+.str.1.264
+1
+_ZTVN6tflite14MicroAllocatorE
+0
+.str.2.278
+1
+.str.3.279
+1
+.str.4.282
+1
+.str.5.285
+1
+.str.6.270
+1
+.str.7.272
+1
+.str.8.273
+1
+.str.9.271
+1
+.str.10.268
+1
+.str.11.269
+1
+.str.12.267
+1
+_ZTSN6tflite14MicroAllocatorE
+0
+_ZTIN6tflite14MicroAllocatorE
+0
+_ZTVN6tflite12_GLOBAL__N_125MicroBuiltinDataAllocatorE
+0
+_ZTSN6tflite12_GLOBAL__N_125MicroBuiltinDataAllocatorE
+0
+_ZTSN6tflite20BuiltinDataAllocatorE
+0
+_ZTIN6tflite20BuiltinDataAllocatorE
+0
+_ZTIN6tflite12_GLOBAL__N_125MicroBuiltinDataAllocatorE
+0
+_ZTVN6tflite20BuiltinDataAllocatorE
+0
+.str.13.265
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorIfjE3GetEj
+1
+.str.14.266
+1
+__PRETTY_FUNCTION__._ZNK11flatbuffers6VectorIxjE3GetEj
+1
+.str.288
+1
+.str.1.289
+1
+.str.2.290
+1
+.str.3.291
+1
+.str.4.292
+1
+.str.5.293
+1
+.str.6.294
+1
+.str.7.295
+1
+.str.8.296
+1
+.str.9.297
+1
+.str.10.298
+1
+.str.11.299
+1
+.str.12.300
+1
+.str.301
+1
+.str.1.302
+1
+.str.2.303
+1
+.str.3.304
+1
+.str.4.305
+1
+.str.5.306
+1
+.str.6.307
+1
+.str.7.308
+1
+_ZN6tflite26kFullyConnectedInputTensorE
+1
+.str.320
+1
+.str.1.314
+1
+.str.2.321
+1
+_ZN6tflite28kFullyConnectedWeightsTensorE
+1
+.str.3.322
+1
+_ZN6tflite25kFullyConnectedBiasTensorE
+1
+_ZN6tflite27kFullyConnectedOutputTensorE
+1
+.str.4.323
+1
+.str.5.313
+1
+.str.6.324
+1
+.str.7.325
+1
+.str.8.326
+1
+.str.9.327
+1
+.str.10.328
+1
+.str.11.329
+1
+.str.12.330
+1
+.str.13.331
+1
+.str.14.311
+1
+.str.15.312
+1
+.str.16.319
+1
+.str.17.316
+1
+.str.18.317
+1
+.str.19.318
+1
+.str.20.315
+1
+.str.337
+1
+.str.1.338
+1
+.str.2.339
+1
+.str.3.340
+1
+.str.4.341
+1
+.str.5.342
+1
+.str.6.343
+1
+.str.7.344
+1
+.str.8.345
+1
+.str.9.346
+1
+.str.10.347
+1
+.str.11.348
+1
+.str.12.336
+1
+.str.351
+1
+.str.1.352
+1
+.str.2.353
+1
+.str.3.354
+1
+.str.4.355
+1
+.str.5.356
+1
+.str.6.357
+1
+.str.7.358
+1
+.str.8.359
+1
+.str.9.360
+1
+.str.10.361
+1
+.str.11.362
+1
+.str.12.363
+1
+.str.13.364
+1
+.str.14.365
+1
+.str.15.366
+1
+.str.16.367
+1
+.str.17.368
+1
+.str.18.372
+1
+.str.19.373
+1
+.str.20.374
+1
+.str.21.375
+1
+.str.22.376
+1
+.str.23.377
+1
+.str.24.378
+1
+.str.25.369
+1
+.str.26.370
+1
+.str.27.371
+1
+.str.380
+1
+.str.1.381
+1
+.str.2.379
+1
+.str.3.384
+1
+.str.4.383
+1
+.str.5.382
+1
+_ZTVN10__cxxabiv121__vmi_class_type_infoE
+0
+_ZTSN6tflite26SingleArenaBufferAllocatorE
+0
+_ZTVN6tflite33NonPersistentArenaBufferAllocatorE
+0
+.str.393
+1
+.str.1.392
+1
+.str.2.391
+1
+.str.3.390
+1
+.str.4.387
+1
+.str.5.388
+1
+.str.6.389
+1
+_ZTSN6tflite33NonPersistentArenaBufferAllocatorE
+0
+_ZTIN6tflite33NonPersistentArenaBufferAllocatorE
+0
+_ZTVN6tflite35RecordingSingleArenaBufferAllocatorE
+0
+_ZTSN6tflite35RecordingSingleArenaBufferAllocatorE
+0
+_ZTIN6tflite26SingleArenaBufferAllocatorE
+0
+_ZTIN6tflite35RecordingSingleArenaBufferAllocatorE
+0
+_ZTVN6tflite26SingleArenaBufferAllocatorE
+0
+_ZTVN6tflite29INonPersistentBufferAllocatorE
+0
+_ZTSN6tflite29INonPersistentBufferAllocatorE
+0
+_ZTIN6tflite29INonPersistentBufferAllocatorE
+0
+_ZTVN6tflite30PersistentArenaBufferAllocatorE
+0
+.str.402
+1
+_ZTSN6tflite30PersistentArenaBufferAllocatorE
+0
+_ZTSN6tflite26IPersistentBufferAllocatorE
+0
+_ZTIN6tflite26IPersistentBufferAllocatorE
+0
+_ZTIN6tflite30PersistentArenaBufferAllocatorE
+0
+_ZTVN6tflite26IPersistentBufferAllocatorE
+0
+.str.407
+1
+_ZTVN6tflite19GreedyMemoryPlannerE
+0
+.str.413
+1
+.str.1.410
+1
+.str.2.411
+1
+.str.3.412
+1
+.str.4.414
+1
+_ZTSN6tflite19GreedyMemoryPlannerE
+0
+_ZTIN6tflite19GreedyMemoryPlannerE
+0
+_ZTVN6tflite30NonPersistentMemoryPlannerShimE
+0
+.str.418
+1
+.str.1.417
+1
+_ZTSN6tflite30NonPersistentMemoryPlannerShimE
+0
+_ZTIN6tflite30NonPersistentMemoryPlannerShimE
+0
+_ZN6tflite19LinearMemoryPlanner15kMaxBufferCountE
+1
+_ZTVN6tflite19LinearMemoryPlannerE
+0
+.str.420
+1
+.str.1.419
+1
+_ZTSN6tflite19LinearMemoryPlannerE
+0
+_ZTSN6tflite18MicroMemoryPlannerE
+0
+_ZTIN6tflite18MicroMemoryPlannerE
+0
+_ZTIN6tflite19LinearMemoryPlannerE
+0
+_ZTVN6tflite18MicroMemoryPlannerE
+0
+_ZTVN6tflite21MicroInterpreterGraphE
+0
+.str.439
+1
+.str.1.440
+1
+.str.2.441
+1
+_ZTVN10__cxxabiv120__si_class_type_infoE
+0
+_ZTSN6tflite21MicroInterpreterGraphE
+0
+_ZTVN10__cxxabiv117__class_type_infoE
+0
+_ZTSN6tflite10MicroGraphE
+0
+_ZTIN6tflite10MicroGraphE
+0
+_ZTIN6tflite21MicroInterpreterGraphE
+0
+_ZTVN6tflite10MicroGraphE
+0
+_ZZN6tflite24EnumNamesBuiltinOperatorEvE5names
+1
+_ZL18debug_log_callback
+1
+.str.456
+1
+.str.1.457
+1
+.str.2.458
+1
+.str.3.459
+1
+.str.4.460
+1
+.str.5.461
+1
+.str.6.462
+1
+.str.7.463
+1
+.str.8.464
+1
+.str.9.465
+1
+.str.10.466
+1
+.str.11.467
+1
+.str.12.468
+1
+.str.13.475
+1
+.str.14.476
+1
+.str.15.473
+1
+.str.16.454
+1
+.str.17.455
+1
+.str.18.474
+1
+_ZN6tflite12RuntimeShape13kMaxSmallSizeE
+1
+.str.493
+1
+.str.1.494
+1
+.str.2.495
+1
+.str.3.496
+1
+.str.4.497
+1
+.str.5.498
+1
+.str.6.499
+1
+.str.7.500
+1
+.str.8.501
+1
+.str.9.502
+1
+.str.10.503
+1
+.str.11.504
+1
+.str.12.505
+1
+.str.13.506
+1
+.str.14.507
+1
+.str.15.508
+1
+.str.16.509
+1
+.str.17.510
+1
+.str.18.511
+1
+.str.19.512
+1
+.str.20.513
+1
+.str.516
+1
+.str.1.519
+1
+.str.2.520
+1
+.str.3.521
+1
+.str.4.522
+1
+.str.5.525
+1
+g_hello_world_int8_model_data
+1
+g_hello_world_float_model_data
+1
+sigmoid_table_uint16
+1
+Loading input firmware.
+2026-01-13 15:16:21.160725
+load cfg start
+load cfg end
+2026-01-13 15:16:34.360763
+load svfg start
+load svfg end
+2026-01-13 15:17:27.426127
+load pdg start
+load pdg end
+2026-01-13 15:17:28.572397
+self.funcfilemap size: 1243
+self.datafilemap size: 501
+../autogen/autogen_heap.cis a data only file
+../autogen/autogen_data.cis a data only file
+../tflm/examples/hello_world/models/hello_world_int8_model_data.ccis a data only file
+../tflm/examples/hello_world/models/hello_world_float_model_data.ccis a data only file
+../tflm/third_party/cmsis_nn/Source/NNSupportFunctions/arm_nntables.cis a data only file
+self.files size: 223
+total_objects_pdg: 1933
+total_objects_cfg: 1336
+total_objects_pddg: 1790
+config[cliques]: {'LwIP': {'name': 'tflm', 'policy': 'priv', 'dir': 'tflm/', 'isolation': 'monitor', 'pins': {}}, 'Libc': {'name': 'libc', 'policy': 'priv', 'dir': 'arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/', 'isolation': 'monitor', 'pins': {}}}
+cliques dir: tflm/
+Debug self.files
+Members for LwIP
+cliques dir: arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/
+Debug self.files
+Members for Libc
+Last background clique
+Leaf Compartments:111
+Loose Functions:1822
+Number of compartments: 114
+Number of compartments: 114
+Number of compartments: 115
+[91mERROR:[0mInvalid Clique Configuration for variable:AHBPrescTable
+[93mWARN:[0mUsers:
+[93mWARN:[0m	Clique: tflm
+[93mWARN:[0m	_ZN6tflite8GetModelEPKv
+[93mWARN:[0m	Clique: background_clique
+[93mWARN:[0m	main

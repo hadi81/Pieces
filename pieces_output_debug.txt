@@ -1,0 +1,1712 @@
+
+*********General Stats***************
+################ (program : stm32AiApp.elf.bc)###############
+AddrsNum            3437
+BBWith2Succ         1746
+BBWith3Succ         23
+CallsNum            1168
+ConstArrayObj       107
+ConstStructObj      140
+ConstantObj         0
+CopysNum            1100
+FIObjNum            500
+FSObjNum            2142
+FunctionObjs        492
+GepsNum             8180
+GlobalObjs          426
+HeapObjs            1
+IndCallSites        251
+LoadsNum            9558
+MaxStructSize       50
+NonPtrObj           2058
+ReturnsNum          319
+StackObjs           1723
+StoresNum           7254
+TotalCallSite       1041
+TotalFieldObjects   2155
+TotalObjects        4798
+TotalPTASVFStmts    19208
+TotalPointers       43390
+TotalSVFStmts       40820
+VarArrayObj         164
+VarStructObj        99
+----------------Time and memory stats--------------------
+LLVMIRTime          0.087
+SVFIRTime           0.775
+SymbolTableTime     0.16
+#######################################################
+
+*********PTACallGraph Stats (Andersen analysis)***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Numbers stats----------------------------
+CalRetPairInCycle   0
+MaxNodeInCycle      0
+NodeInCycle         0
+TotalCycle          0
+TotalEdge           799
+TotalNode           492
+#######################################################
+
+*********Andersen Pointer Analysis Stats***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AvgIn/OutAddrEdge   0.129065
+AvgIn/OutCopyEdge   0.712298
+AvgIn/OutEdge       1.21522
+AvgIn/OutLoadEdge   0.277652
+AvgIn/OutStoreEdge  0.0962068
+AvgPtsSetSize       0.147028
+AvgTopLvlPtsSize    0.391098
+CollapseTime        0
+CopyGepTime         0
+LoadStoreTime       0
+MemoryUsageVmrss    53700
+MemoryUsageVmsize   52616
+SCCDetectTime       0
+SCCMergeTime        0
+TotalTime           0.57
+UpdateCGTime        0
+----------------Numbers stats----------------------------
+AddrProcessed       2671
+CopyProcessed       1061
+DummyFieldPtrs      280
+FieldObjs           2155
+GepProcessed        5131
+IndCallSites        251
+IndEdgeSolved       9
+LoadProcessed       4523
+LocalVarInRecur     0
+MaxInAddrEdge       1
+MaxInCopyEdge       51
+MaxInLoadEdge       1
+MaxInStoreEdge      3
+MaxNodesInSCC       3
+MaxOutAddrEdge      30
+MaxOutCopyEdge      356
+MaxOutLoadEdge      272
+MaxOutStoreEdge     424
+MaxPtsSetSize       3
+MemObjects          4798
+NodesInCycles       21
+NullPointer         1478
+NumOfAddrs          2671
+NumOfCGEdge         22478
+NumOfCGNode         22200
+NumOfCopys          6568
+NumOfFieldExpand    0
+NumOfGeps           8173
+NumOfLoads          5746
+NumOfSCCDetect      5
+NumOfSFRs           0
+NumOfStores         1991
+NumOfValidNode      20695
+NumOfValidObjNode   3684
+Pointers            43390
+PointsToBlkPtr      0
+PointsToConstPtr    15
+SolveIterations     5
+StoreProcessed      1567
+TotalCycleNum       7
+TotalObjects        4798
+TotalPWCCycleNum    1
+TotalPointers       43390
+#######################################################
+
+****Persistent Points-To Cache Statistics: Andersen's analysis bitvector****
+################ (program : stm32AiApp.elf.bc)###############
+UniquePointsToSets       4812
+TotalUnions              8895
+PropertyUnions           8872
+UniqueUnions             3
+LookupUnions             14
+PreemptiveUnions         6
+TotalComplements         108841
+PropertyComplements      108813
+UniqueComplements        7
+LookupComplements        14
+PreemptiveComplements    7
+TotalIntersections       6134
+PropertyIntersections    6119
+UniqueIntersections      1
+LookupIntersections      0
+PreemptiveIntersections  14
+#######################################################
+Building PTR ONLY SVFG
+
+===== printTargetFunctionMRs =====
+[removeCommonMRs] ModelA callees: 0  ModelB callees: 0  Shared: 0
+[removeCommonMRs] No shared functions found
+
+===== printTargetFunctionMRs =====
+
+*********Memory SSA Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AverageRegSize      1.31192
+GenMUCHITime        0.033
+GenRegionTime       0.092
+InsertPHITime       0.005
+SSARenameTime       0.017
+TotalMSSATime       0.148
+----------------Numbers stats----------------------------
+BBHasMSSAPhi        227
+CSChiNode           51
+CSHasChi            40
+CSHasMu             71
+CSMuNode            133
+FunEntryChi         1066
+FunHasEntryChi      275
+FunHasRetMu         434
+FunRetMu            1053
+LoadHasMu           5746
+LoadMuNode          4525
+MSSAPhi             653
+MaxRegSize          62
+MemRegions          965
+StoreChiNode        758
+StoreHasChi         1188
+#######################################################
+
+*********SVFG Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+ATNodeTime          0.008
+AvgWeight           1.24746
+ConnDirEdgeTime     0
+ConnIndEdgeTime     0.023
+OptTime             0
+TLNodeTime          0
+TotalTime           0.031
+----------------Numbers stats----------------------------
+ActualIn            133
+ActualOut           51
+ActualParam         899
+ActualRet           32
+Addr                2671
+AvgInDegree         1
+AvgIndInDeg         1
+AvgIndOutDeg        2
+AvgOutDegree        1
+Copy                51
+DirectCallEdge      561
+DirectEdge          19406
+DirectRetEdge       13
+FormalIn            1066
+FormalOut           1053
+FormalParam         352
+FormalRet           12
+Gep                 8180
+IndCallEdge         252
+IndRetEdge          142
+IndirectEdge        8284
+IndirectEdgeLabels  10334
+Load                5746
+MSSAPhi             653
+MaxInDegree         60
+MaxIndInDeg         60
+MaxIndOutDeg        273
+MaxOutDegree        436
+PHI                 12
+Store               1991
+TotalEdge           27690
+TotalNode           22903
+#######################################################
+
+*********PTACallGraph Stats (Flow-sensitive analysis)***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Numbers stats----------------------------
+CalRetPairInCycle   0
+FIObjNum            501
+FSObjNum            2142
+MaxNodeInCycle      0
+NodeInCycle         0
+TotalCycle          0
+TotalEdge           790
+TotalNode           492
+#######################################################
+
+*********Flow-Sensitive Pointer Analysis Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AddrTime            0
+AverageSCCSize      2.20106
+AvgAddrTakenVarPts  0.358104
+AvgINPtsSize        0
+AvgOUTPtsSize       0
+AvgPtsSize          0.388632
+AvgTopLvlPtsSize    0.388632
+CopyTime            0
+DirectPropaTime     0
+GepTime             0
+IndirectPropaTime   0
+LoadTime            0
+MemoryUsageVmrss    88724
+MemoryUsageVmsize   86856
+PhiTime             0
+ProcessTime         0
+PropagationTime     0
+SCCTime             0
+SolveTime           0.114
+StoreTime           0
+Strong/WeakUpdTime  0
+TotalTime           1.122
+UpdateCGTime        0
+----------------Numbers stats----------------------------
+AI_SNodesHaveIN     0
+AI_SNodesHaveOUT    0
+AO_SNodesHaveIN     0
+AO_SNodesHaveOUT    0
+CopysNum            51
+DummyFieldPtrs      280
+FI_SNodesHaveIN     0
+FI_SNodesHaveOUT    0
+FO_SNodesHaveIN     0
+FO_SNodesHaveOUT    0
+FieldObjs           2155
+IndEdgeSolved       0
+LD_SNodesHaveIN     0
+LD_SNodesHaveOUT    0
+LocalVarInRecur     0
+MaxAddrTakenVarPts  3
+MaxINPtsSize        0
+MaxOUTPtsSize       0
+MaxPtsSize          3
+MaxSCCSize          20
+MaxTopLvlPtsSize    3
+MemObjects          4798
+NullPointer         1478
+NumOfAddrTakenVar   1561
+NumOfNodesInSCC     416
+NumOfSCC            189
+PHI_SNodesHaveIN    0
+PHI_SNodesHaveOUT   0
+Pointers            43390
+PointsToBlkPtr      15
+PointsToConstPtr    0
+PotentialVarHaveIN  0
+PotentialVarHaveOUT 0
+ProcessedAParam     0
+ProcessedAddr       2671
+ProcessedCopy       52
+ProcessedFRet       0
+ProcessedGep        11497
+ProcessedLoad       10638
+ProcessedMSSANode   3110
+ProcessedPhi        22
+ProcessedStore      4441
+SNodesHaveIN        0
+SNodesHaveOUT       0
+ST_SNodesHaveIN     0
+ST_SNodesHaveOUT    0
+SolveIterations     1
+StoresNum           1991
+StrongUpdates       1207
+TotalObjects        4798
+TotalPointers       43390
+VarHaveEmptyIN      0
+VarHaveEmptyOUT     0
+VarHaveIN           0
+VarHaveIN_AI        0
+VarHaveIN_AO        0
+VarHaveIN_FI        0
+VarHaveIN_FO        0
+VarHaveIN_LD        0
+VarHaveIN_PHI       0
+VarHaveIN_ST        0
+VarHaveOUT          0
+VarHaveOUT_AI       0
+VarHaveOUT_AO       0
+VarHaveOUT_FI       0
+VarHaveOUT_FO       0
+VarHaveOUT_LD       0
+VarHaveOUT_PHI      0
+VarHaveOUT_ST       0
+#######################################################
+
+****Persistent Points-To Cache Statistics: flow-sensitive analysis bitvector****
+################ (program : stm32AiApp.elf.bc)###############
+UniquePointsToSets       4806
+TotalUnions              16512
+PropertyUnions           16454
+UniqueUnions             3
+LookupUnions             49
+PreemptiveUnions         6
+TotalComplements         0
+PropertyComplements      0
+UniqueComplements        0
+LookupComplements        0
+PreemptiveComplements    0
+TotalIntersections       0
+PropertyIntersections    0
+UniqueIntersections      0
+LookupIntersections      0
+PreemptiveIntersections  0
+#######################################################
+g_secret_global
+1
+g_public_global
+1
+g_untrusted_in
+1
+g_processed
+1
+_estack
+0
+_Min_Stack_Size
+0
+__sbrk_heap_end
+1
+_end
+0
+huart1
+1
+pFlash
+1
+AHBPrescTable
+1
+APBPrescTable
+1
+uwTickPrio
+1
+uwTickFreq
+1
+uwTick
+1
+SystemCoreClock
+1
+DMA_CalcBaseAndBitshift.flagBitshiftOffset
+1
+.str
+1
+.str.1
+.str.2
+.str.3
+.str.4
+.compoundliteral
+0
+.compoundliteral.5
+0
+.compoundliteral.6
+0
+.compoundliteral.7
+0
+.compoundliteral.8
+0
+.compoundliteral.9
+0
+.compoundliteral.10
+0
+.compoundliteral.11
+0
+.compoundliteral.12
+0
+.compoundliteral.13
+0
+.compoundliteral.14
+0
+.compoundliteral.15
+0
+.compoundliteral.16
+0
+.compoundliteral.17
+0
+.compoundliteral.18
+0
+gemm_0_layer
+1
+global_network
+1
+.compoundliteral.20
+0
+.compoundliteral.21
+0
+serving_default_keras_tensor0_output_array
+1
+serving_default_keras_tensor0_output
+1
+.compoundliteral.23
+0
+.compoundliteral.24
+0
+gemm_2_output_array
+1
+gemm_2_output
+1
+nl_0_nl_layer
+1
+gemm_0_chain
+1
+gemm_1_layer
+1
+nl_0_nl_chain
+1
+nl_1_nl_layer
+1
+gemm_1_chain
+1
+gemm_2_layer
+1
+nl_1_nl_chain
+1
+gemm_2_chain
+1
+.compoundliteral.26
+0
+.compoundliteral.27
+0
+.compoundliteral.28
+0
+.compoundliteral.29
+0
+.compoundliteral.30
+0
+.compoundliteral.31
+0
+.compoundliteral.32
+0
+nl_1_nl_output_array
+1
+nl_1_nl_output
+1
+.compoundliteral.34
+0
+.compoundliteral.35
+0
+gemm_2_weights_array
+1
+gemm_2_weights
+1
+.compoundliteral.37
+0
+.compoundliteral.38
+0
+gemm_2_bias_array
+1
+gemm_2_bias
+1
+.compoundliteral.40
+0
+.compoundliteral.41
+0
+.compoundliteral.42
+0
+.compoundliteral.43
+0
+.compoundliteral.44
+0
+.compoundliteral.45
+0
+.compoundliteral.46
+0
+gemm_1_output_array
+1
+gemm_1_output
+1
+.compoundliteral.48
+0
+.compoundliteral.49
+0
+.compoundliteral.50
+0
+.compoundliteral.51
+0
+.compoundliteral.52
+0
+.compoundliteral.53
+0
+.compoundliteral.54
+0
+nl_0_nl_output_array
+1
+nl_0_nl_output
+1
+.compoundliteral.56
+0
+.compoundliteral.57
+0
+gemm_1_weights_array
+1
+gemm_1_weights
+1
+.compoundliteral.59
+0
+.compoundliteral.60
+0
+gemm_1_bias_array
+1
+gemm_1_bias
+1
+.compoundliteral.62
+0
+.compoundliteral.63
+0
+.compoundliteral.64
+0
+.compoundliteral.65
+0
+.compoundliteral.66
+0
+.compoundliteral.67
+0
+.compoundliteral.68
+0
+gemm_0_output_array
+1
+gemm_0_output
+1
+.compoundliteral.70
+0
+.compoundliteral.71
+0
+.compoundliteral.72
+0
+.compoundliteral.73
+0
+.compoundliteral.74
+0
+.compoundliteral.75
+0
+.compoundliteral.76
+0
+gemm_0_weights_array
+1
+gemm_0_weights
+1
+.compoundliteral.78
+0
+.compoundliteral.79
+0
+gemm_0_bias_array
+1
+gemm_0_bias
+1
+g_network_sinewave_weights_map
+1
+g_network_sinewave_activations_map
+1
+.compoundliteral.61
+0
+g_network_sinewave_data_map_activations
+1
+.compoundliteral.1
+0
+g_network_sinewave_data_map_weights
+1
+__const.ai_network_sinewave_data_params_get.map_activations
+0
+__const.ai_network_sinewave_data_params_get.map_weights
+0
+g_network_sinewave_activations_table
+1
+s_network_sinewave_weights_array_u64
+1
+g_network_sinewave_weights_table
+1
+data_ins_sinewave
+1
+data_outs_sinewave
+1
+data_ins_imgclf
+1
+data_outs_imgclf
+1
+pool_sinewave
+1
+data_activations_sinewave
+1
+pool_imgclf
+1
+data_activations_imgclf
+1
+.str.70
+.str.1.74
+main_network_sinewave
+1
+__const.MX_X_CUBE_AI_Sinewave_Process.err
+0
+.str.2.77
+main_network_imgclf
+1
+__const.MX_X_CUBE_AI_Imgclf_Process.err
+0
+.str.3.80
+networks
+1
+.str.4.71
+ai_input_sinewave
+1
+ai_output_sinewave
+1
+.str.5
+ai_input_imgclf
+1
+ai_output_imgclf
+1
+.str.6
+.str.7
+.str.8
+.str.9
+.str.10
+.str.11
+gnetworks
+1
+.str.81
+.str.1.82
+.str.2.83
+.str.3.84
+.str.4.85
+.compoundliteral.158
+0
+.compoundliteral.5.92
+0
+.compoundliteral.6.151
+0
+.compoundliteral.7.93
+0
+.compoundliteral.8.141
+0
+.compoundliteral.9.148
+0
+.compoundliteral.10.149
+0
+.compoundliteral.11.150
+0
+.compoundliteral.12.142
+0
+.compoundliteral.13.143
+0
+.compoundliteral.14.145
+0
+.compoundliteral.15.146
+0
+.compoundliteral.16.147
+0
+.compoundliteral.17.144
+0
+.compoundliteral.18.94
+0
+g_network_imgclf
+1
+.compoundliteral.20.98
+0
+.compoundliteral.21.99
+0
+serving_default_keras_tensor0_output_array.100
+1
+serving_default_keras_tensor0_output.97
+1
+.compoundliteral.23.139
+0
+.compoundliteral.24.140
+0
+nl_18_output_array
+1
+nl_18_output
+1
+nl_0_nl_layer.95
+1
+conv2d_0_chain
+1
+.compoundliteral.26.96
+0
+conv2d_0_layer
+1
+nl_0_nl_chain.101
+1
+nl_2_layer
+1
+conv2d_1_chain
+1
+.compoundliteral.28.104
+0
+conv2d_1_layer
+1
+nl_2_chain
+1
+nl_2_nl_params
+1
+pool_4_chain
+1
+.compoundliteral.30.105
+0
+pool_4_layer
+1
+eltwise_5_layer
+1
+pool_3_chain
+1
+.compoundliteral.32.106
+0
+pool_3_layer
+1
+eltwise_6_layer
+1
+eltwise_5_chain
+1
+gemm_8_layer
+1
+eltwise_6_chain
+1
+nl_9_layer
+1
+gemm_8_chain
+1
+gemm_10_layer
+1
+nl_9_chain
+1
+nl_11_layer
+1
+gemm_10_chain
+1
+eltwise_12_layer
+1
+nl_11_chain
+1
+nl_13_layer
+1
+eltwise_12_chain
+1
+eltwise_14_layer
+1
+nl_13_chain
+1
+eltwise_15_layer
+1
+eltwise_14_chain
+1
+nl_16_layer
+1
+eltwise_15_chain
+1
+gemm_17_layer
+1
+nl_16_chain
+1
+nl_18_layer
+1
+gemm_17_chain
+1
+nl_18_chain
+1
+.compoundliteral.34.136
+0
+.compoundliteral.35.137
+0
+.compoundliteral.36
+0
+.compoundliteral.37.138
+0
+.compoundliteral.38.135
+0
+.compoundliteral.39
+0
+.compoundliteral.40.134
+0
+gemm_17_output_array
+1
+gemm_17_output
+1
+.compoundliteral.42.128
+0
+.compoundliteral.43.129
+0
+.compoundliteral.44.130
+0
+.compoundliteral.45.131
+0
+.compoundliteral.46.127
+0
+.compoundliteral.47
+0
+.compoundliteral.48.126
+0
+nl_16_output_array
+1
+nl_16_output
+1
+.compoundliteral.50.132
+0
+.compoundliteral.51.133
+0
+gemm_17_weights_array
+1
+gemm_17_weights
+1
+.compoundliteral.53.123
+0
+.compoundliteral.54.124
+0
+.compoundliteral.55
+0
+.compoundliteral.56.125
+0
+.compoundliteral.57.122
+0
+.compoundliteral.58
+0
+.compoundliteral.59.121
+0
+eltwise_15_output_array
+1
+eltwise_15_output
+1
+.compoundliteral.61.117
+0
+.compoundliteral.62.118
+0
+.compoundliteral.63.119
+0
+.compoundliteral.64.120
+0
+.compoundliteral.65.116
+0
+.compoundliteral.66.113
+0
+.compoundliteral.67.114
+0
+eltwise_14_output_array
+1
+eltwise_14_output
+1
+.compoundliteral.69
+0
+.compoundliteral.70.110
+0
+.compoundliteral.71.111
+0
+.compoundliteral.72.112
+0
+.compoundliteral.73.109
+0
+.compoundliteral.74.107
+0
+.compoundliteral.75.108
+0
+nl_13_output_array
+1
+nl_13_output
+1
+.compoundliteral.77
+0
+.compoundliteral.78.115
+0
+arith_constant1_2D_array
+1
+arith_constant1_2D
+1
+.compoundliteral.80
+0
+.compoundliteral.81
+0
+.compoundliteral.82
+0
+.compoundliteral.83
+0
+.compoundliteral.84
+0
+.compoundliteral.85
+0
+.compoundliteral.86
+0
+eltwise_12_output_array
+1
+eltwise_12_output
+1
+.compoundliteral.88
+0
+.compoundliteral.89
+0
+.compoundliteral.90
+0
+.compoundliteral.91
+0
+.compoundliteral.92
+0
+.compoundliteral.93
+0
+.compoundliteral.94
+0
+nl_11_output_array
+1
+nl_11_output
+1
+.compoundliteral.96
+0
+.compoundliteral.97
+0
+eltwise_12_scale_array
+1
+eltwise_12_scale
+1
+.compoundliteral.99
+0
+.compoundliteral.100
+0
+eltwise_12_bias_array
+1
+eltwise_12_bias
+1
+.compoundliteral.102
+0
+.compoundliteral.103
+0
+.compoundliteral.104
+0
+.compoundliteral.105
+0
+.compoundliteral.106
+0
+.compoundliteral.107
+0
+.compoundliteral.108
+0
+gemm_10_output_array
+1
+gemm_10_output
+1
+.compoundliteral.110
+0
+.compoundliteral.111
+0
+.compoundliteral.112
+0
+.compoundliteral.113
+0
+.compoundliteral.114
+0
+.compoundliteral.115
+0
+.compoundliteral.116
+0
+nl_9_output_array
+1
+nl_9_output
+1
+.compoundliteral.118
+0
+.compoundliteral.119
+0
+gemm_10_weights_array
+1
+gemm_10_weights
+1
+.compoundliteral.121
+0
+.compoundliteral.122
+0
+.compoundliteral.123
+0
+.compoundliteral.124
+0
+.compoundliteral.125
+0
+.compoundliteral.126
+0
+.compoundliteral.127
+0
+gemm_8_output_array
+1
+gemm_8_output
+1
+.compoundliteral.129
+0
+.compoundliteral.130
+0
+.compoundliteral.131
+0
+.compoundliteral.132
+0
+.compoundliteral.133
+0
+.compoundliteral.134
+0
+.compoundliteral.135
+0
+eltwise_6_output_array
+1
+eltwise_6_output0
+1
+.compoundliteral.137
+0
+.compoundliteral.138
+0
+gemm_8_weights_array
+1
+gemm_8_weights
+1
+.compoundliteral.140
+0
+.compoundliteral.141
+0
+.compoundliteral.142
+0
+.compoundliteral.143
+0
+.compoundliteral.144
+0
+.compoundliteral.145
+0
+.compoundliteral.146
+0
+eltwise_5_output_array
+1
+eltwise_5_output
+1
+.compoundliteral.148
+0
+.compoundliteral.149
+0
+eltwise_6_output
+1
+.compoundliteral.151
+0
+.compoundliteral.152
+0
+.compoundliteral.153
+0
+.compoundliteral.154
+0
+.compoundliteral.155
+0
+.compoundliteral.156
+0
+.compoundliteral.157
+0
+pool_4_output_array
+1
+pool_4_output
+1
+.compoundliteral.159
+0
+.compoundliteral.160
+0
+pool_3_output_array
+1
+pool_3_output
+1
+.compoundliteral.162
+0
+.compoundliteral.163
+0
+.compoundliteral.164
+0
+.compoundliteral.165
+0
+.compoundliteral.166
+0
+.compoundliteral.167
+0
+.compoundliteral.168
+0
+nl_2_output_array
+1
+nl_2_output
+1
+.compoundliteral.170
+0
+.compoundliteral.171
+0
+.compoundliteral.172
+0
+.compoundliteral.173
+0
+.compoundliteral.174
+0
+.compoundliteral.175
+0
+.compoundliteral.176
+0
+.compoundliteral.177
+0
+.compoundliteral.178
+0
+.compoundliteral.179
+0
+.compoundliteral.180
+0
+.compoundliteral.181
+0
+conv2d_1_output_array
+1
+conv2d_1_output
+1
+nl_2_nl_params_data
+1
+.compoundliteral.183
+0
+.compoundliteral.184
+0
+.compoundliteral.185
+0
+.compoundliteral.186
+0
+.compoundliteral.187
+0
+.compoundliteral.188
+0
+.compoundliteral.189
+0
+nl_0_nl_output_array.103
+1
+nl_0_nl_output.102
+1
+.compoundliteral.191
+0
+.compoundliteral.192
+0
+conv2d_1_weights_array
+1
+conv2d_1_weights
+1
+.compoundliteral.194
+0
+.compoundliteral.195
+0
+conv2d_0_bias_array
+1
+conv2d_0_bias
+1
+.compoundliteral.197
+0
+.compoundliteral.198
+0
+.compoundliteral.199
+0
+.compoundliteral.200
+0
+.compoundliteral.201
+0
+.compoundliteral.202
+0
+.compoundliteral.203
+0
+conv2d_0_output_array
+1
+conv2d_0_output
+1
+.compoundliteral.205
+0
+.compoundliteral.206
+0
+.compoundliteral.207
+0
+.compoundliteral.208
+0
+.compoundliteral.209
+0
+.compoundliteral.210
+0
+.compoundliteral.211
+0
+conv2d_0_weights_array
+1
+conv2d_0_weights
+1
+.compoundliteral.213
+0
+.compoundliteral.214
+0
+conv2d_0_scratch0_array
+1
+conv2d_0_scratch0
+1
+g_network_imgclf_weights_map
+1
+g_network_imgclf_activations_map
+1
+.compoundliteral.182
+0
+g_network_imgclf_data_map_activations
+1
+.compoundliteral.1.183
+0
+g_network_imgclf_data_map_weights
+1
+__const.ai_network_imgclf_data_params_get.map_activations
+0
+__const.ai_network_imgclf_data_params_get.map_weights
+0
+g_network_imgclf_activations_table
+1
+s_network_imgclf_weights_array_u64
+1
+g_network_imgclf_weights_table
+1
+
+*********General Stats***************
+################ (program : stm32AiApp.elf.bc)###############
+AddrsNum            3437
+BBWith2Succ         1746
+BBWith3Succ         23
+CallsNum            1168
+ConstArrayObj       107
+ConstStructObj      140
+ConstantObj         0
+CopysNum            1100
+FIObjNum            500
+FSObjNum            2142
+FunctionObjs        492
+GepsNum             8180
+GlobalObjs          426
+HeapObjs            1
+IndCallSites        251
+LoadsNum            9558
+MaxStructSize       50
+NonPtrObj           2058
+ReturnsNum          319
+StackObjs           1723
+StoresNum           7254
+TotalCallSite       1041
+TotalFieldObjects   2155
+TotalObjects        4798
+TotalPTASVFStmts    19208
+TotalPointers       43390
+TotalSVFStmts       40820
+VarArrayObj         164
+VarStructObj        99
+----------------Time and memory stats--------------------
+LLVMIRTime          0.092
+SVFIRTime           0.784
+SymbolTableTime     0.17
+#######################################################
+
+*********PTACallGraph Stats (Andersen analysis)***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Numbers stats----------------------------
+CalRetPairInCycle   0
+MaxNodeInCycle      0
+NodeInCycle         0
+TotalCycle          0
+TotalEdge           799
+TotalNode           492
+#######################################################
+
+*********Andersen Pointer Analysis Stats***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AvgIn/OutAddrEdge   0.129065
+AvgIn/OutCopyEdge   0.712298
+AvgIn/OutEdge       1.21522
+AvgIn/OutLoadEdge   0.277652
+AvgIn/OutStoreEdge  0.0962068
+AvgPtsSetSize       0.147028
+AvgTopLvlPtsSize    0.391098
+CollapseTime        0
+CopyGepTime         0
+LoadStoreTime       0
+MemoryUsageVmrss    53700
+MemoryUsageVmsize   52616
+SCCDetectTime       0
+SCCMergeTime        0
+TotalTime           0.641
+UpdateCGTime        0
+----------------Numbers stats----------------------------
+AddrProcessed       2671
+CopyProcessed       1061
+DummyFieldPtrs      280
+FieldObjs           2155
+GepProcessed        5131
+IndCallSites        251
+IndEdgeSolved       9
+LoadProcessed       4523
+LocalVarInRecur     0
+MaxInAddrEdge       1
+MaxInCopyEdge       51
+MaxInLoadEdge       1
+MaxInStoreEdge      3
+MaxNodesInSCC       3
+MaxOutAddrEdge      30
+MaxOutCopyEdge      356
+MaxOutLoadEdge      272
+MaxOutStoreEdge     424
+MaxPtsSetSize       3
+MemObjects          4798
+NodesInCycles       21
+NullPointer         1478
+NumOfAddrs          2671
+NumOfCGEdge         22478
+NumOfCGNode         22200
+NumOfCopys          6568
+NumOfFieldExpand    0
+NumOfGeps           8173
+NumOfLoads          5746
+NumOfSCCDetect      5
+NumOfSFRs           0
+NumOfStores         1991
+NumOfValidNode      20695
+NumOfValidObjNode   3684
+Pointers            43390
+PointsToBlkPtr      0
+PointsToConstPtr    15
+SolveIterations     5
+StoreProcessed      1567
+TotalCycleNum       7
+TotalObjects        4798
+TotalPWCCycleNum    1
+TotalPointers       43390
+#######################################################
+
+****Persistent Points-To Cache Statistics: Andersen's analysis bitvector****
+################ (program : stm32AiApp.elf.bc)###############
+UniquePointsToSets       4812
+TotalUnions              8895
+PropertyUnions           8872
+UniqueUnions             3
+LookupUnions             14
+PreemptiveUnions         6
+TotalComplements         108841
+PropertyComplements      108813
+UniqueComplements        7
+LookupComplements        14
+PreemptiveComplements    7
+TotalIntersections       6134
+PropertyIntersections    6119
+UniqueIntersections      1
+LookupIntersections      0
+PreemptiveIntersections  14
+#######################################################
+Building PTR ONLY SVFG
+
+===== printTargetFunctionMRs =====
+[removeCommonMRs] ModelA callees: 0  ModelB callees: 0  Shared: 0
+[removeCommonMRs] No shared functions found
+
+===== printTargetFunctionMRs =====
+
+*********Memory SSA Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AverageRegSize      1.31192
+GenMUCHITime        0.032
+GenRegionTime       0.099
+InsertPHITime       0.004
+SSARenameTime       0.026
+TotalMSSATime       0.161
+----------------Numbers stats----------------------------
+BBHasMSSAPhi        227
+CSChiNode           51
+CSHasChi            40
+CSHasMu             71
+CSMuNode            133
+FunEntryChi         1066
+FunHasEntryChi      275
+FunHasRetMu         434
+FunRetMu            1053
+LoadHasMu           5746
+LoadMuNode          4525
+MSSAPhi             653
+MaxRegSize          62
+MemRegions          965
+StoreChiNode        758
+StoreHasChi         1188
+#######################################################
+
+*********SVFG Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+ATNodeTime          0.009
+AvgWeight           1.24746
+ConnDirEdgeTime     0
+ConnIndEdgeTime     0.023
+OptTime             0
+TLNodeTime          0
+TotalTime           0.032
+----------------Numbers stats----------------------------
+ActualIn            133
+ActualOut           51
+ActualParam         899
+ActualRet           32
+Addr                2671
+AvgInDegree         1
+AvgIndInDeg         1
+AvgIndOutDeg        2
+AvgOutDegree        1
+Copy                51
+DirectCallEdge      561
+DirectEdge          19406
+DirectRetEdge       13
+FormalIn            1066
+FormalOut           1053
+FormalParam         352
+FormalRet           12
+Gep                 8180
+IndCallEdge         252
+IndRetEdge          142
+IndirectEdge        8284
+IndirectEdgeLabels  10334
+Load                5746
+MSSAPhi             653
+MaxInDegree         60
+MaxIndInDeg         60
+MaxIndOutDeg        273
+MaxOutDegree        436
+PHI                 12
+Store               1991
+TotalEdge           27690
+TotalNode           22903
+#######################################################
+
+*********PTACallGraph Stats (Flow-sensitive analysis)***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Numbers stats----------------------------
+CalRetPairInCycle   0
+FIObjNum            501
+FSObjNum            2142
+MaxNodeInCycle      0
+NodeInCycle         0
+TotalCycle          0
+TotalEdge           790
+TotalNode           492
+#######################################################
+
+*********Flow-Sensitive Pointer Analysis Statistics***************
+################ (program : stm32AiApp.elf.bc)###############
+----------------Time and memory stats--------------------
+AddrTime            0
+AverageSCCSize      2.20106
+AvgAddrTakenVarPts  0.358104
+AvgINPtsSize        0
+AvgOUTPtsSize       0
+AvgPtsSize          0.388632
+AvgTopLvlPtsSize    0.388632
+CopyTime            0
+DirectPropaTime     0
+GepTime             0
+IndirectPropaTime   0
+LoadTime            0
+MemoryUsageVmrss    88720
+MemoryUsageVmsize   86856
+PhiTime             0
+ProcessTime         0
+PropagationTime     0
+SCCTime             0
+SolveTime           0.116
+StoreTime           0
+Strong/WeakUpdTime  0
+TotalTime           1.232
+UpdateCGTime        0
+----------------Numbers stats----------------------------
+AI_SNodesHaveIN     0
+AI_SNodesHaveOUT    0
+AO_SNodesHaveIN     0
+AO_SNodesHaveOUT    0
+CopysNum            51
+DummyFieldPtrs      280
+FI_SNodesHaveIN     0
+FI_SNodesHaveOUT    0
+FO_SNodesHaveIN     0
+FO_SNodesHaveOUT    0
+FieldObjs           2155
+IndEdgeSolved       0
+LD_SNodesHaveIN     0
+LD_SNodesHaveOUT    0
+LocalVarInRecur     0
+MaxAddrTakenVarPts  3
+MaxINPtsSize        0
+MaxOUTPtsSize       0
+MaxPtsSize          3
+MaxSCCSize          20
+MaxTopLvlPtsSize    3
+MemObjects          4798
+NullPointer         1478
+NumOfAddrTakenVar   1561
+NumOfNodesInSCC     416
+NumOfSCC            189
+PHI_SNodesHaveIN    0
+PHI_SNodesHaveOUT   0
+Pointers            43390
+PointsToBlkPtr      15
+PointsToConstPtr    0
+PotentialVarHaveIN  0
+PotentialVarHaveOUT 0
+ProcessedAParam     0
+ProcessedAddr       2671
+ProcessedCopy       52
+ProcessedFRet       0
+ProcessedGep        11497
+ProcessedLoad       10638
+ProcessedMSSANode   3110
+ProcessedPhi        22
+ProcessedStore      4441
+SNodesHaveIN        0
+SNodesHaveOUT       0
+ST_SNodesHaveIN     0
+ST_SNodesHaveOUT    0
+SolveIterations     1
+StoresNum           1991
+StrongUpdates       1207
+TotalObjects        4798
+TotalPointers       43390
+VarHaveEmptyIN      0
+VarHaveEmptyOUT     0
+VarHaveIN           0
+VarHaveIN_AI        0
+VarHaveIN_AO        0
+VarHaveIN_FI        0
+VarHaveIN_FO        0
+VarHaveIN_LD        0
+VarHaveIN_PHI       0
+VarHaveIN_ST        0
+VarHaveOUT          0
+VarHaveOUT_AI       0
+VarHaveOUT_AO       0
+VarHaveOUT_FI       0
+VarHaveOUT_FO       0
+VarHaveOUT_LD       0
+VarHaveOUT_PHI      0
+VarHaveOUT_ST       0
+#######################################################
+
+****Persistent Points-To Cache Statistics: flow-sensitive analysis bitvector****
+################ (program : stm32AiApp.elf.bc)###############
+UniquePointsToSets       4806
+TotalUnions              16512
+PropertyUnions           16454
+UniqueUnions             3
+LookupUnions             49
+PreemptiveUnions         6
+TotalComplements         0
+PropertyComplements      0
+UniqueComplements        0
+LookupComplements        0
+PreemptiveComplements    0
+TotalIntersections       0
+PropertyIntersections    0
+UniqueIntersections      0
+LookupIntersections      0
+PreemptiveIntersections  0
+#######################################################
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+An alias pointer used
+Loading input firmware.
+2026-04-02 13:07:23.962594
+load cfg start
+load cfg end
+2026-04-02 13:07:23.997734
+load svfg start
+
+========== AFTER globals loop (SVFG reachability edges) ==========
+  modelA: NOT in graph
+  arenaA: NOT in graph
+  labelsA: NOT in graph
+  modelB: NOT in graph
+  arenaB: NOT in graph
+  labelsB: NOT in graph
+  g_hello_world_int8_model_data: NOT in graph
+
+========== BEFORE potential_links ==========
+  modelA: NOT in graph
+  arenaA: NOT in graph
+  labelsA: NOT in graph
+  modelB: NOT in graph
+  arenaB: NOT in graph
+  labelsB: NOT in graph
+  g_hello_world_int8_model_data: NOT in graph
+
+[potential_links] direct successor diff + entry-point links per confidential var:
+  modelA: NOT in new_ddg
+  arenaA: NOT in new_ddg
+  labelsA: NOT in new_ddg
+  modelB: NOT in new_ddg
+  arenaB: NOT in new_ddg
+  labelsB: NOT in new_ddg
+  g_hello_world_int8_model_data: NOT in new_ddg
+
+========== AFTER potential_links + node naming (final) ==========
+  modelA: NOT in graph
+  arenaA: NOT in graph
+  labelsA: NOT in graph
+  modelB: NOT in graph
+  arenaB: NOT in graph
+  labelsB: NOT in graph
+  g_hello_world_int8_model_data: NOT in graph
+load svfg end
+2026-04-02 13:07:30.942501
+load pdg start
+load pdg end
+2026-04-02 13:07:31.022301
+self.funcfilemap size: 482
+self.datafilemap size: 182
+../X-CUBE-AI/App/network_sinewave_data_params.cis a data only file
+../X-CUBE-AI/App/network_imgclf_data_params.cis a data only file
+self.files size: 32
+total_objects_pdg: 771
+total_objects_cfg: 348
+total_objects_pddg: 553
+config[cliques]: {'System': {'name': 'Sys', 'policy': 'priv', 'dir': 'Sys/', 'isolation': 'monitor', 'type': 'priv', 'pins': {}}, 'NeuralNetwork': {'name': 'NNRuntime', 'policy': 'util', 'dir': 'Middlewares/ST/AI/', 'isolation': 'monitor', 'type': 'utility', 'pins': {}}}
+cliques dir: Sys/
+Debug self.files
+Members for System
+cliques dir: Middlewares/ST/AI/
+Debug self.files
+Members for NeuralNetwork
+[UTIL] clique 'NNRuntime' added 38 objects to util:
+[UTIL]   ['ai_platform_context_acquire', 'ai_platform_runtime_get_revision', 'ai_platform_runtime_get_version', 'ai_platform_api_get_version', 'ai_platform_interface_api_get_version', 'ai_platform_api_get_network_report', 'ai_platform_network_get_error', 'ai_platform_network_create', 'forward_dense', 'forward_relu', 'ai_buffer_array_item_set_address', 'ai_platform_network_init', 'ai_platform_network_post_init', 'ai_platform_get_activations_map', 'ai_platform_network_set_error', 'ai_platform_get_weights_map', 'ai_platform_inputs_get', 'ai_platform_outputs_get', 'ai_platform_network_destroy', 'ai_platform_network_process', 'ai_platform_bind_network_params', 'forward_conv2d_if32of32wf32', 'forward_dw_if32of32wf32', 'forward_mp', 'forward_ap', 'forward_eltwise', 'ai_sum_f32', 'ai_sum_buffer_f32', 'ai_mul_f32', 'ai_mul_buffer_f32', 'forward_tanh', 'forward_sigmoid', 'forward_bn', 'forward_abs', 'ai_max_f32', 'ai_max_buffer_f32', 'forward_sqrt', 'forward_sm']
+Last background clique
+Leaf Compartments:31
+Loose Functions:740
+
+[IFT] confd: gnetworks
+[IFT] compartment: ['ai_mnetwork_find', 'ai_mnetwork_is_valid', 'ai_mnetwork_create', 'ai_mnetwork_handle', 'ai_mnetwork_destroy', 'ai_mnetwork_release_handle', 'ai_mnetwork_get_report', 'ai_mnetwork_get_error', 'ai_mnetwork_init', 'ai_mnetwork_run', 'ai_mnetwork_forward', 'ai_mnetwork_get_private_handle']
+
+[IFT] confd: main_network_sinewave
+[IFT] compartment: ['ai_network_sinewave_get_error', 'ai_network_sinewave_create', 'ai_network_sinewave_create_and_init', 'ai_network_sinewave_data_params_get', 'ai_network_sinewave_init', 'network_configure_weights', 'network_configure_activations', 'ai_network_sinewave_inputs_get', 'ai_network_sinewave_outputs_get', 'ai_network_sinewave_run', 'acquire_and_process_data_sinewave', 'post_process_sinewave', 'ai_boostrap_sinewave', 'ai_log_err', 'printf', 'MX_X_CUBE_AI_Sinewave_Process', 'ai_run_sinewave', 'MX_X_CUBE_AI_Sinewave_Init']
+
+[IFT] confd: g_secret_global
+[IFT] compartment: ['Dummy_Update_Secret_Global_Task', 'Dummy_Implicit_Flow_Task', 'ChangePublic', 'Dummy_secondImplicit_Flow_Task']
+
+[IFT] confd: pool_sinewave
+[IFT] compartment: ['ai_network_sinewave_get_error', 'ai_network_sinewave_create', 'ai_network_sinewave_create_and_init', 'ai_network_sinewave_data_params_get', 'ai_network_sinewave_init', 'network_configure_weights', 'network_configure_activations', 'ai_network_sinewave_inputs_get', 'ai_network_sinewave_outputs_get', 'ai_network_sinewave_run', 'acquire_and_process_data_sinewave', 'post_process_sinewave', 'ai_boostrap_sinewave', 'ai_log_err', 'printf', 'MX_X_CUBE_AI_Sinewave_Process', 'ai_run_sinewave', 'MX_X_CUBE_AI_Sinewave_Init']
+
+[IFT] confd: pool_imgclf
+[IFT] compartment: ['acquire_and_process_data_imgclf', 'post_process_imgclf', 'ai_log_err', 'printf', 'ai_boostrap_imgclf', 'ai_network_imgclf_create_and_init', 'ai_network_imgclf_inputs_get', 'ai_network_imgclf_outputs_get', 'MX_X_CUBE_AI_Imgclf_Process', 'ai_run_imgclf', 'ai_network_imgclf_get_error', 'ai_network_imgclf_create', 'ai_network_imgclf_data_params_get', 'ai_network_imgclf_init', 'network_imgclf_configure_weights', 'network_imgclf_configure_activations', 'ai_network_imgclf_run', 'MX_X_CUBE_AI_Imgclf_Init']
+
+[IFT] confd: main_network_imgclf
+[IFT] compartment: ['acquire_and_process_data_imgclf', 'post_process_imgclf', 'ai_log_err', 'printf', 'ai_boostrap_imgclf', 'ai_network_imgclf_create_and_init', 'ai_network_imgclf_inputs_get', 'ai_network_imgclf_outputs_get', 'MX_X_CUBE_AI_Imgclf_Process', 'ai_run_imgclf', 'ai_network_imgclf_get_error', 'ai_network_imgclf_create', 'ai_network_imgclf_data_params_get', 'ai_network_imgclf_init', 'network_imgclf_configure_weights', 'network_imgclf_configure_activations', 'ai_network_imgclf_run', 'MX_X_CUBE_AI_Imgclf_Init']
+[93mWARN:[0mMerging for shared data:__const.MX_X_CUBE_AI_Sinewave_Process.err
+[93mWARN:[0mUsers:
+[93mWARN:[0mMX_X_CUBE_AI_Sinewave_Process
+[93mWARN:[0m	Clique: background_clique
+[93mWARN:[0m	MX_X_CUBE_AI_Sinewave_Process
+[93mWARN:[0m	Clique: background_clique
+[93mWARN:[0m	ai_log_err
+[93mWARN:[0mMerging for shared data:g_untrusted_in
+[93mWARN:[0mUsers:
+[93mWARN:[0mDummy_Processing_Task
+[93mWARN:[0m	Clique: background_clique
+[93mWARN:[0m	Dummy_Processing_Task
+[93mWARN:[0m	Clique: background_clique
+[93mWARN:[0m	Dummy_Input_Task
+Number of compartments: 25

@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "STM32F769",
+            "includePath": [
+                "${workspaceFolder}/Sys/Core/Inc",
+                "${workspaceFolder}/Sys/Drivers/STM32F7xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Sys/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/Sys/Drivers/CMSIS/Device/ST/STM32F7xx/Include",
+                "${workspaceFolder}/Sys/Drivers/CMSIS/Include",
+                "${workspaceFolder}/App",
+                "/home/hzm5471/tools/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include",
+                "/home/hzm5471/tools/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.2.1",
+                "/home/hzm5471/tools/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/14.2.1/arm-none-eabi"
+            ],
+            "defines": [
+                "STM32F769xx",
+                "USE_HAL_DRIVER",
+                "__MPU_PRESENT=1U"
+            ],
+            "compilerPath": "/usr/bin/clang-16",
+            "compilerArgs": [
+                "--target=arm-none-eabi",
+                "-mcpu=cortex-m7",
+                "-mthumb"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-arm"
+        }
+    ],
+    "version": 4
+}
